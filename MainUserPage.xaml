@@ -1,0 +1,112 @@
+﻿<Page x:Class="PrisonDataBaseWpfApp.MainUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PrisonDataBaseWpfApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="555" d:DesignWidth="950"
+      Title="MainUserPage">
+    <Grid Background="#FFF540">
+        <TextBlock 
+            Margin="5"
+            Text="Prison Center"
+            FontSize="25"
+            Foreground="Black"
+            FontFamily="Times New Roman" 
+            FontWeight="Bold"/>
+        <StackPanel 
+            Height="450"
+            Width="580">
+            <TextBlock
+                x:Name="HelloUser"  
+                Text="Hello" 
+                HorizontalAlignment="Center"
+                FontSize="25"
+                Foreground="Black" 
+                FontFamily="Times New Roman" 
+                FontWeight="Bold" />
+            <Border 
+                x:Name="allCommands"
+                Width="560"
+                Height="360"
+                Background="#FFF873"
+                CornerRadius="20"
+                BorderBrush="Black"
+                BorderThickness="3" >
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="5"></DropShadowEffect>
+                </Border.Effect>
+                <StackPanel >
+                    <TextBlock 
+                        x:Name="availableCommands"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="10" 
+                        Text="Available Commands"
+                        FontSize="25"
+                        Foreground="Black"
+                        FontFamily="Times New Roman"
+                        FontWeight="Bold"/>
+                    <Grid 
+                        Margin="10" 
+                        Height="260">
+                        <Button 
+                            x:Name="AddPrisonerButton"
+                            Content="Add Prisoner" 
+                            VerticalAlignment="Top"
+                            Height="70"
+                            Width="510"
+                            Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                            Background="#FF8900"
+                            FontSize="40"
+                            FontWeight="Bold"
+                            BorderBrush="Black"
+                            BorderThickness="2"
+                            Click="Button_AddPrisoner_Click" />
+                        <Button 
+                            x:Name="RemovePrisonerButton"
+                            Content="Remove Prisoner"
+                            Height="70" 
+                            VerticalAlignment="Center"
+                            Width="510"
+                            Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                            Background="#FF8900" 
+                            FontSize="40"
+                            FontWeight="Bold"
+                            BorderBrush="Black" BorderThickness="2"
+                            Click="Button_RemovePrisoner_Click"/>
+                        <Button 
+                            x:Name="ShowAllPrisonersButton"
+                            Content="Show All Prisoners"
+                            Height="70"
+                            VerticalAlignment="Bottom"
+                            Width="510"
+                            Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                            Background="#FF8900"
+                            FontSize="40"
+                            FontWeight="Bold"
+                            BorderBrush="Black"
+                            BorderThickness="2"
+                            Click="Button_ShowAllPrisoners_Click" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Button
+                x:Name="LogOutButton"
+                Content="Log out" 
+                HorizontalContentAlignment="Center"
+                Height="43"
+                Width="140"
+                VerticalAlignment="Bottom"
+                Margin="15"
+                Style="{StaticResource MaterialDesignFlatLightBgButton}"
+                Background="DarkRed"
+                FontSize="20"
+                FontWeight="Bold"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Click="Button_LogOut_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
